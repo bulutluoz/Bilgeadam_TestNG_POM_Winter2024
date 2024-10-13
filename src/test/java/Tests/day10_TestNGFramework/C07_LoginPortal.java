@@ -3,7 +3,9 @@ package Tests.day10_TestNGFramework;
 import com.github.javafaker.Faker;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.WebUniPage;
 import utilities.ConfigReader;
@@ -55,17 +57,29 @@ public class C07_LoginPortal {
         webUniPage.loginSayfasiLoginButonu
                     .click();
 
-
         //7.Popup'ta cikan yazinin "validation failed" oldugunu test edin
+        String expectedAlertYazisi = ConfigReader.getProperty("webUniAlertYazi");
+        String actualAlertYazisi = Driver.getDriver()
+                                            .switchTo().alert()
+                                            .getText();
+        Assert.assertEquals(actualAlertYazisi,expectedAlertYazisi);
 
         //8.Ok diyerek Popup'i kapatin
+        Driver.getDriver()
+                .switchTo().alert()
+                .accept();
 
         //9.Ilk sayfaya geri donun
+        ReusableMethods.switchToWindowTitle(Driver.getDriver(),"WebDriverUniversity.com");
 
         //10.Ilk sayfaya donuldugunu test edin
 
+        String expectedTitle = "WebDriverUniversity.com";
+        String actualTitle = Driver.getDriver().getTitle();
 
-        ReusableMethods.bekle(3);
+        Assert.assertEquals(actualTitle,expectedTitle);
+
+        ReusableMethods.bekle(1);
         Driver.quitDriver();
 
     }
