@@ -14,8 +14,8 @@
         
         <groups>
             <run>
-                <include name="Smoke"></include>
-                <exclude name="Regression"></exclude>
+                <include name="raporluSmoke"></include>
+
             </run>
         </groups>
         
