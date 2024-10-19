@@ -42,7 +42,7 @@ public class C04_DataProviderIleAramaTesti extends TestBaseRapor {
     }
 
 
-    @Test(dataProvider = "aranacakKelimeProvideri")
+    @Test(dataProvider = "aranacakKelimeProvideri",groups = "raporluSmoke")
     public void aramaTesti( String aranacakKelime ){
         extentTest = extentReports.createTest(aranacakKelime+" arama testi",
                 "Arama sonucunda urun bulanabilmeli");
