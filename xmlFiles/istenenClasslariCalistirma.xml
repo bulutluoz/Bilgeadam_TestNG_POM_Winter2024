@@ -1,0 +1,32 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+    <!-- 
+        Suite : Belirli araliklarla calistirmak uzere hazirlanan
+                bir veya birden fazla Test iceren suite'lerdir
+    
+    
+        Test : Belirli bir amac icin bir araya getirilen
+               test package  / class veya test method'laridir
+               Testin icerigine gore 5-10 class ile binlerce class arasinda class icerebilir
+               
+        Test hiyerarsisi
+          
+          suite ==> Test ==> package 
+                         ==> class
+                         ==> test method'lari 
+                         
+          Smoke Test :
+                day10 C03, C05 ve C06                   
+    -->
+
+        <suite name="Smoke test suite">  
+            <test name="Smoke test">
+                
+                <classes>
+                    <class name="Tests.day10_TestNGFramework.C03_FacebookTesti"></class>
+                    <class name="Tests.day10_TestNGFramework.C05_PozitifLoginTesti"></class>
+                    <class name="Tests.day10_TestNGFramework.C06_NegatifLoginTesti"></class>
+                </classes>
+                
+            </test>
+        </suite>

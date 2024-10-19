@@ -1,0 +1,33 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="istenen gruplari calistirma">
+
+    <!--
+        Eger her xml dosyasi icin tek tek secim yapmayalim
+        bunun yerine
+        test method'u olusturuldugunda hangi Test'lerde calisacagini soyleyelim dersek
+        
+        tum smoke testleri calistirin
+    -->
+
+    <test name="smoke tests">
+        
+        <groups>
+            <run>
+                <include name="Smoke"></include>
+                <exclude name="Regression"></exclude>
+            </run>
+        </groups>
+        
+        <packages>
+            <package name="Tests.*"></package>
+        </packages>
+        
+        
+        
+    </test>
+    
+
+
+
+</suite>

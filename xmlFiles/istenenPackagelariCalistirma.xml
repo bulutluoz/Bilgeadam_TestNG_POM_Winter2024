@@ -1,0 +1,16 @@
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<!-- day10 package'inin tamamini calistirin-->
+
+
+<suite name="istenen package suite">
+    <test name="istenen package'lari calistirma">
+        
+        <packages>
+            <package name="Tests.day10_TestNGFramework"></package>
+            <!-- eger Tests.* yazarsak tum test package'larini calistirir-->
+        </packages>
+
+    </test>
+</suite>

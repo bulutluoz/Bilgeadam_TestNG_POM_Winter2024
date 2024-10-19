@@ -18,7 +18,7 @@ public class C06_NegatifLoginTesti {
     //6- sayfayi kapatin
 
 
-    @Test
+    @Test(groups = {"Smoke", "Regression"})
     public void gecersizPasswordTesti(){
 
         //1- https://www.testotomasyonu.com/ anasayfasina gidin
@@ -46,7 +46,7 @@ public class C06_NegatifLoginTesti {
 
     }
 
-    @Test
+    @Test(groups = {"Smoke", "kullanici E2E"})
     public void gecersizEmailTesti(){
 
         //1- https://www.testotomasyonu.com/ anasayfasina gidin
@@ -73,7 +73,7 @@ public class C06_NegatifLoginTesti {
         Driver.quitDriver();
     }
 
-    @Test
+    @Test(groups = {"Smoke", "Regression", "kullanici E2E"})
     public void gecersizEmailGecersizPasswordTesti(){
 
         //1- https://www.testotomasyonu.com/ anasayfasina gidin
