@@ -1,0 +1,24 @@
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="paralel testler" thread-count="2" parallel="tests">
+
+    <test name="Paralel Test 1">
+
+        <classes>
+            <class name="Tests.day10_TestNGFramework.C03_FacebookTesti"></class>
+            <class name="Tests.day10_TestNGFramework.C07_LoginPortal"></class>
+        </classes>
+
+    </test>
+
+    <test name="Paralel Test 2">
+
+        <classes>
+            <class name="Tests.day10_TestNGFramework.C05_PozitifLoginTesti"></class>
+            <class name="Tests.day10_TestNGFramework.C06_NegatifLoginTesti"></class>
+        </classes>
+    </test>
+
+
+</suite>
